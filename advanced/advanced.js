@@ -32,7 +32,7 @@ var motor = /** @class */ (function (_super) {
         return _this;
     }
     motor.prototype.calcMotor = function () {
-        return _super.prototype.kilometersLeft * _super.prototype.numberOfSeats / _super.prototype.year * this.doors;
+        return this.kilometersLeft * this.numberOfSeats / this.year * this.doors;
     };
     return motor;
 }(vehicle));
@@ -44,7 +44,45 @@ var truck = /** @class */ (function (_super) {
         return _this;
     }
     truck.prototype.calcTruck = function () {
-        return this.volume / _super.prototype.year;
+        return this.volume / this.year;
     };
     return truck;
 }(vehicle));
+function getData() {
+    var button = this.getAttribute('id');
+    if (button == 'carSubmit') {
+        var millage = parseInt(document.getElementById("CarKm").value);
+        var seats = parseInt(document.getElementById("CarSeats").value);
+        var year = parseInt(document.getElementById("CarYear").value);
+        var doors = parseInt(document.getElementById("CarDoor").value);
+        var car = new motor('ford', 'name', year, '150', millage, 'diesel', seats, doors, 'Limousine');
+        var calcResult = car.calcMotor().toFixed(1);
+        var jumbotron = document.getElementsByClassName('jumbotron')[0];
+        var result = document.createElement('h1');
+        result.innerHTML = "your car is worth " + calcResult + " $";
+        var form = document.getElementById('formCar');
+        form.style.display = 'none';
+        jumbotron.append(result);
+        console.log(result);
+    }
+    else {
+        var millage = parseInt(document.getElementById("truckKm").value);
+        var seats = parseInt(document.getElementById("truckSeats").value);
+        var year = parseInt(document.getElementById("truckYear").value);
+        var volumen = parseInt(document.getElementById("truckVolume").value);
+        var truck = new truck('man', 'name', year, 200, millage, 'diesel', seats, volumen);
+        var calcResult = truck.calcTruck().toFixed(1);
+        var jumbotron = document.getElementsByClassName('jumbotron')[0];
+        var result = document.createElement('h1');
+        result.innerHTML = "your car is worth " + calcResult + " $";
+        var form = document.getElementById('formTruck');
+        form.style.display = 'none';
+        jumbotron.append(result);
+        console.log(result);
+    }
+}
+var submitButtons = document.getElementsByClassName('submit');
+for (var _i = 0, submitButtons_1 = submitButtons; _i < submitButtons_1.length; _i++) {
+    var button = submitButtons_1[_i];
+    button.addEventListener('click', getData);
+}

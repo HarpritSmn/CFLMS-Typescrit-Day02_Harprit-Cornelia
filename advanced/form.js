@@ -7,6 +7,7 @@ $(document).ready(function() {
 
 
   $("#buttonCar").click(function() {
+    $("#formTruck").hide();
     $("#formCar").toggle();
   });
 
@@ -14,6 +15,7 @@ $(document).ready(function() {
 
 
   $("#buttonTruck").click(function() {
+    $("#formCar").hide();
     $("#formTruck").toggle();
   });
 
