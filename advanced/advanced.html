@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Advanced</title>
+
 	<link rel="stylesheet" href="./style/main.css">
 
   <!-- Bootstrap -->
@@ -11,6 +12,10 @@
 
   <!--Fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@300;600&display=swap" rel="stylesheet">
+
+	<!--JQuery-->
+	<link rel="stylesheet" href="">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
 </head>
 <body>
@@ -35,6 +40,60 @@
     </ul>
   </div>
 </nav>
+<div class="jumbotron">
+	<h1>What do you want to calculate?</h1>
+
+	<button type="button" id="buttonCar">CAR</button>
+	<button type="button" id="buttonTruck">TRUCK</button>
+	<br>
+	<br>
+
+	<form id="formCar">
+	  	<label for="CarKm">Mileage (km):</label><br>
+		<input type="number" id="CarKm" value="0"><br>
+
+		<label for="CarSeats">Number of seats:</label><br>
+		<input type="number" id="CarSeats" value="0"><br>
+
+		<label for="CarYear">Production year:</label><br>
+		<input type="number" id="CarYear" value="0"><br>
+
+		<label for="CarDoor">Amount of doors:</label><br>
+		<input type="number" id="CarDoor" value="0"><br><br>
+
+
+		<input type="submit" value="Submit">
+	</form>
+
+	<form id="formTruck">
+
+		<label for="truckKm">Mileage (km):</label><br>
+		<input type="number" id="truckKm" value="0km"><br>
+
+		<label for="truckSeat">Number of seats:</label><br>
+		<input type="number" id="truckSeat" value="0"><br>
+
+		<label for="truckYear">Production year:</label><br>
+		<input type="number" id="truckYear" value="0"><br>
+
+		<label for="truckVolume">Volume of the truck:</label><br>
+		<input type="number" id="truckVolume" value="0"><br><br>
+
+
+		<input type="submit" value="Submit">
+	</form>
+
+
+</div>
+
+
+	
+
+
+
+
+<script src="form.js" type="text/javascript"></script>
+<script src="advanced.js" type="text/javascript"></script>
 
 </body>
 </html>
