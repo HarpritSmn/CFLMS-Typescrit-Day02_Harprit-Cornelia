@@ -5,8 +5,56 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Advanced</title>
 	<link rel="stylesheet" href="">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
 <body>
+
 	
+	<h1>What do you want to calculate?</h1>
+	
+	<button type="button" id="buttonCar">CAR</button>
+	<button type="button" id="buttonTruck">TRUCK</button>
+	<br>
+	<br>
+
+	<form id="formCar">
+	  	<label>Mileage (km):</label><br>
+		<input type="number" id="CarKm" value="0"><br>
+
+		<label>Number of seats:</label><br>
+		<input type="number" id="CarSeats" value="0"><br>
+
+		<label>Production year:</label><br>
+		<input type="number" id="CarYear" value="0"><br>
+
+		<label>Amount of doors:</label><br>
+		<input type="number" id="CarDoor" value="0"><br><br>
+
+
+		<input type="submit" value="Submit">
+	</form> 
+
+	<form id="formTruck">
+
+		<label>Mileage (km):</label><br>
+		<input type="number" id="truckKm" value="0km"><br>
+
+		<label>Number of seats:</label><br>
+		<input type="number" id="truckSeat" value="0"><br>
+
+		<label>Production year:</label><br>
+		<input type="number" id="truckYear" value="0"><br>
+
+		<label>Volume of the truck:</label><br>
+		<input type="number" id="truckVolume" value="0"><br><br>
+
+		
+		<input type="submit" value="Submit">
+	</form>
+
+
+
+<script src="form.js" type="text/javascript"></script>
+<script src="advanced.js" type="text/javascript"></script>
 </body>
 </html>
