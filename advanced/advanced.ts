@@ -61,7 +61,7 @@ function getData() {
 
 		var jumbotron = document.getElementsByClassName('jumbotron')[0];
 		var result = document.createElement('h1');
-		result.innerHTML=`your car is worth ${calcResult} $`;
+		result.innerHTML=`Your car is worth ${calcResult} $`;
 		var form = document.getElementById('formCar');
 		form.style.display='none';
 		jumbotron.append(result);
@@ -79,7 +79,7 @@ function getData() {
 
 		var jumbotron = document.getElementsByClassName('jumbotron')[0];
 		var result = document.createElement('h1');
-		result.innerHTML=`your car is worth ${calcResult} $`;
+		result.innerHTML=`Your car is worth ${calcResult} $`;
 
 		var form = document.getElementById('formTruck');
 		form.style.display='none';
